@@ -1,7 +1,7 @@
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from src.logger import setup_logger
+from logger import setup_logger
 import time
 import hmac
 import base64

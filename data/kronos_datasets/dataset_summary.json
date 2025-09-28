@@ -1,0 +1,14 @@
+{
+  "train_symbols": 3,
+  "val_symbols": 3,
+  "test_symbols": 3,
+  "total_train_records": 630,
+  "total_val_records": 135,
+  "total_test_records": 135,
+  "created_at": "2025-09-27T23:04:05.241508",
+  "symbols": [
+    "BTC-USD-SWAP_1H",
+    "BTC-USD-SWAP_4H",
+    "BTC-USD-SWAP_1D"
+  ]
+}

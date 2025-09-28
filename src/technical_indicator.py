@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from src.logger import setup_logger
+from logger import setup_logger
 
 logger = setup_logger()
 

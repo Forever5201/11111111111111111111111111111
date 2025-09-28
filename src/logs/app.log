@@ -1,0 +1,34 @@
+2025-09-27 23:04:01,800 - TradingBotLogger - INFO - Loading configuration from ../config/config.yaml
+2025-09-27 23:04:01,802 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-27 23:04:01,802 - TradingBotLogger - INFO - Configuration loaded.
+2025-09-27 23:04:01,803 - TradingBotLogger - INFO - DataFetcher initialized successfully
+2025-09-27 23:04:01,808 - TradingBotLogger - INFO - Fetching 2000 records for BTC-USD-SWAP 1H
+2025-09-27 23:04:01,809 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (2000 points) for BTC-USD-SWAP at 1H...
+2025-09-27 23:04:02,857 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-27 23:04:02,857 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-27 23:04:03,300 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_1H
+2025-09-27 23:04:03,301 - TradingBotLogger - INFO - Successfully processed 300 records for BTC-USD-SWAP_1H
+2025-09-27 23:04:03,301 - TradingBotLogger - INFO - Fetching 2000 records for BTC-USD-SWAP 4H
+2025-09-27 23:04:03,301 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (2000 points) for BTC-USD-SWAP at 4H...
+2025-09-27 23:04:03,807 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-27 23:04:03,808 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-27 23:04:04,263 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-27 23:04:04,264 - TradingBotLogger - INFO - Successfully processed 300 records for BTC-USD-SWAP_4H
+2025-09-27 23:04:04,264 - TradingBotLogger - INFO - Fetching 2000 records for BTC-USD-SWAP 1D
+2025-09-27 23:04:04,264 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (2000 points) for BTC-USD-SWAP at 1D...
+2025-09-27 23:04:04,780 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-27 23:04:04,781 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-27 23:04:05,233 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_1D
+2025-09-27 23:04:05,233 - TradingBotLogger - INFO - Successfully processed 300 records for BTC-USD-SWAP_1D
+2025-09-27 23:04:05,236 - TradingBotLogger - INFO - Split BTC-USD-SWAP_1H: train=210, val=45, test=45
+2025-09-27 23:04:05,237 - TradingBotLogger - INFO - Split BTC-USD-SWAP_4H: train=210, val=45, test=45
+2025-09-27 23:04:05,237 - TradingBotLogger - INFO - Split BTC-USD-SWAP_1D: train=210, val=45, test=45
+2025-09-27 23:04:05,240 - TradingBotLogger - INFO - Saved train_data.pkl with 3 symbols
+2025-09-27 23:04:05,240 - TradingBotLogger - INFO - Saved val_data.pkl with 3 symbols
+2025-09-27 23:04:05,241 - TradingBotLogger - INFO - Saved test_data.pkl with 3 symbols
+2025-09-27 23:04:05,241 - TradingBotLogger - INFO - Successfully saved Kronos datasets to data/kronos_datasets
+2025-09-27 23:04:05,241 - TradingBotLogger - INFO - Summary: {'train_symbols': 3, 'val_symbols': 3, 'test_symbols': 3, 'total_train_records': 630, 'total_val_records': 135, 'total_test_records': 135, 'created_at': '2025-09-27T23:04:05.241508', 'symbols': ['BTC-USD-SWAP_1H', 'BTC-USD-SWAP_4H', 'BTC-USD-SWAP_1D']}
+2025-09-27 23:04:05,244 - TradingBotLogger - INFO -    - train_data.pkl
+2025-09-27 23:04:05,245 - TradingBotLogger - INFO -    - val_data.pkl
+2025-09-27 23:04:05,245 - TradingBotLogger - INFO -    - test_data.pkl
+2025-09-27 23:04:05,245 - TradingBotLogger - INFO -    - dataset_summary.json

@@ -1,5 +1,5 @@
 from okx.Account import AccountAPI
-from src.logger import setup_logger
+from logger import setup_logger
 import json
 
 logger = setup_logger()
