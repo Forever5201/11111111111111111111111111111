@@ -5,7 +5,10 @@ timeframes:
     - 12H
   longterm:
     - 1D
- 
+  # Kronos预测专用时间框架
+  kronos_prediction:
+    - 4H
+    - 1D
 
 data_sources:
   mark_price: false
@@ -26,6 +29,33 @@ kline_config:
   1D:
     fetch_count: 100
     output_count: 70
+
+# Kronos预测专用配置 (使用组合获取策略突破API限制)
+kronos_prediction_config:
+  # 4H模型预测配置
+  4H:
+    fetch_count: 512    # 目标512条K线（live + history组合获取）
+    target_count: 512   # 真正的512条目标
+    symbol: "BTC-USD-SWAP"
+    model_path: "./Kronos/finetune/outputs/models/model_a_4h"
+    # 组合获取策略参数
+    use_combined_strategy: true  # 启用live + history组合获取
+    live_limit: 300             # live candles限制
+    history_limit: 300          # history candles每批限制
+    max_history_batches: 3      # 最大历史数据批次
+    # 数据覆盖范围：约85天的4H数据，提供更丰富的历史信息
+  # 1D模型预测配置  
+  1D:
+    fetch_count: 512    # 目标512条日线
+    target_count: 512   # 真正的512条目标
+    symbol: "BTC-USD-SWAP"
+    model_path: "./Kronos/finetune/outputs/models/model_b_1d"
+    # 组合获取策略参数
+    use_combined_strategy: true  # 启用live + history组合获取
+    live_limit: 300             # live candles限制
+    history_limit: 300          # history candles每批限制
+    max_history_batches: 3      # 最大历史数据批次
+    # 数据覆盖范围：约512天的日线数据，提供长期历史趋势
  
 
 indicators:

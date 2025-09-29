@@ -1,0 +1,120 @@
+# 🚀 Consolidated Requirements for Quantitative Trading Platform
+# Generated on: 2025-01-27
+# This file consolidates all project dependencies with specific versions
+
+# ============================================================================
+# CORE DATA PROCESSING & ANALYSIS
+# ============================================================================
+pandas==2.2.2                    # Data manipulation and analysis
+numpy==2.2.6                     # Numerical computing
+matplotlib==3.10.6               # Data visualization
+plotly==5.17.0                   # Interactive plotting
+ta==0.11.0                       # Technical analysis indicators
+pandas-ta==0.4.71b0              # Pandas technical analysis extension
+
+# ============================================================================
+# MACHINE LEARNING & AI
+# ============================================================================
+torch==2.6.0+cu126               # Deep learning framework (CUDA)
+transformers==4.48.0             # Transformer models
+huggingface_hub==0.29.3          # Hugging Face model hub
+accelerate==1.5.2                # Training acceleration
+safetensors==0.5.3               # Safe tensor serialization
+einops==0.8.1                    # Tensor operations
+tqdm==4.67.1                     # Progress bars
+
+# ============================================================================
+# WEB FRAMEWORK & API
+# ============================================================================
+flask==2.3.3                     # Web framework
+flask-cors==4.0.0                # Cross-origin resource sharing
+fastapi==0.115.7                 # Async web framework
+uvicorn==0.34.0                  # ASGI server
+requests==2.31.0                 # HTTP library
+websocket-client==1.8.0          # WebSocket client
+websockets==15.0.1               # WebSocket implementation
+
+# ============================================================================
+# FINANCIAL DATA & APIs
+# ============================================================================
+yfinance==0.2.66                 # Yahoo Finance data
+okx==2.1.2                       # OKX exchange API
+ccxt==4.4.48                     # Cryptocurrency exchange library
+
+# ============================================================================
+# CONFIGURATION & ENVIRONMENT  
+# ============================================================================
+python-dotenv==1.0.1             # Environment variables
+pyyaml==6.0.1                    # YAML parsing
+configparser==7.1.0              # Configuration file parser
+
+# ============================================================================
+# DEVELOPMENT & TESTING
+# ============================================================================
+pytest==8.3.4                    # Testing framework
+pytest-asyncio==0.25.1           # Async testing
+black==25.1.1                    # Code formatter
+flake8==8.0.0                    # Linting
+mypy==1.12.1                     # Type checking
+
+# ============================================================================
+# DATABASE & STORAGE
+# ============================================================================
+sqlalchemy==2.0.35               # SQL toolkit
+aiosqlite==0.21.0                # Async SQLite
+redis==5.2.1                     # Redis client
+peewee==3.18.2                   # Lightweight ORM
+
+# ============================================================================
+# MONITORING & LOGGING
+# ============================================================================
+loguru==0.7.3                    # Advanced logging
+psutil==7.0.0                    # System monitoring
+prometheus-client==0.21.0        # Metrics collection
+
+# ============================================================================
+# CRYPTOGRAPHY & SECURITY
+# ============================================================================
+cryptography==46.0.1             # Cryptographic operations
+pyjwt==2.9.0                     # JWT handling
+
+# ============================================================================
+# UTILITIES & HELPERS
+# ============================================================================
+click==8.1.8                     # CLI creation
+rich==13.9.4                     # Rich text and beautiful formatting
+dateutils==0.6.12                # Date utilities
+pytz==2024.2                     # Timezone handling
+colorama==0.4.6                  # Colored terminal output
+
+# ============================================================================
+# ASYNC & CONCURRENCY
+# ============================================================================
+asyncio==3.4.3                   # Asynchronous programming
+aiohttp==3.10.11                 # Async HTTP client/server
+aiofiles==23.1.0                 # Async file operations
+
+# ============================================================================
+# SPECIALIZED LIBRARIES
+# ============================================================================
+scikit-learn==1.4.1.post1        # Machine learning utilities
+scipy==1.13.1                    # Scientific computing
+networkx==3.4.2                  # Network analysis
+pillow==11.0.0                   # Image processing
+
+# ============================================================================
+# VERSION CONFLICT RESOLUTIONS
+# ============================================================================
+# These versions resolve the conflicts identified in dependency analysis
+construct-typing==0.5.5          # Fixed version for anchorpy compatibility
+urllib3==1.26.12                 # Fixed version for okx compatibility
+certifi==2025.1.31               # Latest security certificates
+
+# ============================================================================
+# QLIB INTEGRATION (if using Qlib)
+# ============================================================================
+# Uncomment the following if using Qlib for quantitative finance
+# pyqlib>=0.9.0                  # Qlib quantitative framework
+# jinja2==3.1.6                  # Template engine (qlib dependency)
+# lxml==5.3.0                    # XML processing (qlib dependency)
+

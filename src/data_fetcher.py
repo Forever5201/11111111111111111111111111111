@@ -175,22 +175,22 @@ class DataFetcher:
         """保持与旧代码的兼容性"""
         return self.fetch_market_tickers(instrument_id)
 
-    def fetch_kline_data(self, instrument_id, bar, is_mark_price=True, limit=100):
+    def fetch_kline_data(self, instrument_id, bar, is_mark_price=True, limit=100, before=None, after=None):
         if is_mark_price:
-            return self.fetch_mark_price_kline(instrument_id, bar, limit)
+            return self.fetch_mark_price_kline(instrument_id, bar, limit, before, after)
         else:
-            return self.fetch_actual_price_kline(instrument_id, bar, limit)
+            return self.fetch_actual_price_kline(instrument_id, bar, limit, before, after)
 
-    def fetch_mark_price_kline(self, instrument_id, bar, limit=100):
+    def fetch_mark_price_kline(self, instrument_id, bar, limit=100, before=None, after=None):
         columns = ["timestamp", "open", "high", "low", "close", "volume", 
                   "currency_volume", "turnover", "trades"]
         return self._fetch_kline_data("/api/v5/market/mark-price-candles", 
-                                    instrument_id, bar, limit, columns)
+                                    instrument_id, bar, limit, columns, before, after)
 
-    def fetch_actual_price_kline(self, instrument_id, bar, limit=100):
+    def fetch_actual_price_kline(self, instrument_id, bar, limit=100, before=None, after=None):
         columns = ["timestamp", "open", "high", "low", "close", "volume", 
                   "currency_volume", "turnover", "trades"]
-        df = self._fetch_kline_data("/api/v5/market/candles", instrument_id, bar, limit, columns)
+        df = self._fetch_kline_data("/api/v5/market/candles", instrument_id, bar, limit, columns, before, after)
         
         # 添加资金费率信息
         if not df.empty:
@@ -199,11 +199,147 @@ class DataFetcher:
         
         return df
 
-    def _fetch_kline_data(self, endpoint, instrument_id, bar, limit, columns):
+    def fetch_history_kline(self, instrument_id, bar, limit=100, before=None, after=None):
+        """
+        获取历史K线数据 - 使用history-candles端点
+        支持更大的数据量获取
+        """
+        columns = ["timestamp", "open", "high", "low", "close", "volume", 
+                  "currency_volume", "turnover", "trades"]
+        df = self._fetch_kline_data("/api/v5/market/history-candles", instrument_id, bar, limit, columns, before, after)
+        
+        # 添加资金费率信息
+        if not df.empty:
+            funding_data = self.fetch_funding_rate(instrument_id)
+            df["funding_rate"] = funding_data.get("funding_rate", 0)
+        
+        return df
+
+    def fetch_combined_kline_data(self, instrument_id, bar, target_limit=512):
+        """
+        组合获取K线数据：历史数据 + 最新数据
+        突破单一端点的限制，获取更多数据
+        
+        Args:
+            instrument_id: 交易对ID
+            bar: 时间框架
+            target_limit: 目标数据条数
+            
+        Returns:
+            DataFrame: 合并后的K线数据
+        """
+        all_data = []
+        total_records = 0
+        
+        logger.info(f"🔄 Combined fetch strategy for {instrument_id} {bar}, target: {target_limit}")
+        
+        try:
+            # 策略1: 获取最新数据 (live candles - 最多300条)
+            logger.info("📊 Step 1: Fetching latest data (live candles)")
+            df_live = self.fetch_actual_price_kline(instrument_id, bar, limit=300)
+            
+            if not df_live.empty:
+                all_data.append(df_live)
+                total_records += len(df_live)
+                logger.info(f"   ✅ Live data: {len(df_live)} records")
+                
+                # 如果需要更多数据，获取历史数据
+                if total_records < target_limit:
+                    needed_records = target_limit - total_records
+                    earliest_time = df_live['timestamp'].min()
+                    
+                    logger.info(f"📊 Step 2: Fetching historical data (need {needed_records} more)")
+                    logger.info(f"   Live data earliest time: {earliest_time}")
+                    
+                    # 分批获取历史数据 - 使用after参数策略
+                    batch_count = 0
+                    current_after = earliest_time  # 从live数据的最早时间开始
+                    
+                    while total_records < target_limit and batch_count < 5:
+                        batch_count += 1
+                        batch_limit = min(300, needed_records)
+                        
+                        # 关键修复：使用after参数获取更早的历史数据
+                        df_history = self.fetch_history_kline(
+                            instrument_id, bar, 
+                            limit=batch_limit,
+                            after=current_after  # 获取current_after之前的数据
+                        )
+                        
+                        if not df_history.empty:
+                            # 调试信息：显示时间戳范围
+                            hist_min = df_history['timestamp'].min()
+                            hist_max = df_history['timestamp'].max()
+                            logger.info(f"   📅 History batch {batch_count} raw: {len(df_history)} records")
+                            logger.info(f"      Time range: {hist_min} to {hist_max}")
+                            logger.info(f"      Current after: {current_after}")
+                            
+                            # 检查是否与已有数据重复
+                            existing_timestamps = set()
+                            for existing_df in all_data:
+                                existing_timestamps.update(existing_df['timestamp'].tolist())
+                            
+                            # 过滤已存在的时间戳
+                            df_history_final = df_history[
+                                ~df_history['timestamp'].isin(existing_timestamps)
+                            ]
+                            
+                            logger.info(f"   📊 After deduplication: {len(df_history_final)} records")
+                            
+                            if not df_history_final.empty:
+                                all_data.insert(0, df_history_final)  # 插入到前面
+                                total_records += len(df_history_final)
+                                needed_records = target_limit - total_records
+                                logger.info(f"   ✅ History batch {batch_count}: {len(df_history_final)} records added")
+                                logger.info(f"      Total so far: {total_records}/{target_limit}")
+                                
+                                # 更新current_after为这批数据的最早时间，继续向前获取
+                                current_after = df_history_final['timestamp'].min()
+                                logger.info(f"      Next after: {current_after}")
+                            else:
+                                logger.info(f"   ⚠️ History batch {batch_count}: All data already exists")
+                                break
+                        else:
+                            logger.info(f"   ⚠️ History batch {batch_count}: Empty response")
+                            break
+            
+            # 合并所有数据
+            if all_data:
+                combined_df = pd.concat(all_data, ignore_index=True)
+                combined_df = combined_df.sort_values('timestamp').drop_duplicates(subset=['timestamp'])
+                
+                # 取最新的target_limit条数据
+                if len(combined_df) > target_limit:
+                    combined_df = combined_df.tail(target_limit)
+                
+                logger.info(f"🎯 Combined result: {len(combined_df)} records (target: {target_limit})")
+                return combined_df
+            else:
+                logger.warning("❌ No data obtained from any strategy")
+                return pd.DataFrame()
+                
+        except Exception as e:
+            logger.error(f"❌ Combined fetch failed: {e}")
+            return pd.DataFrame()
+
+    def _fetch_kline_data(self, endpoint, instrument_id, bar, limit, columns, before=None, after=None):
         params = {"instId": instrument_id, "bar": bar, "limit": limit}
+        
+        # 添加时间范围参数
+        if before is not None:
+            params["before"] = str(int(before))
+        if after is not None:
+            params["after"] = str(int(after))
+            
         headers = self._get_headers("GET", endpoint, "")
         try:
-            logger.info(f"Fetching K-line data from {endpoint} ({limit} points) for {instrument_id} at {bar}...")
+            param_info = f"({limit} points)"
+            if before:
+                param_info += f" before {before}"
+            if after:
+                param_info += f" after {after}"
+                
+            logger.info(f"Fetching K-line data from {endpoint} {param_info} for {instrument_id} at {bar}...")
             response = self.session.get(self.base_url + endpoint, headers=headers, params=params)
             response.raise_for_status()
             raw_data = response.json().get("data", [])

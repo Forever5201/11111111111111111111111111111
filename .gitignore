@@ -1,0 +1,98 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
+src/logs/
+
+# Data files (可能很大的数据文件)
+*.pkl
+*.csv
+*.feather
+*.parquet
+*.h5
+*.hdf5
+
+# Model files (训练好的模型文件)
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+outputs/
+checkpoints/
+
+# Cache directories
+.cache/
+*/__pycache__/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Comet ML
+.comet/
+comet_logs/
+
+# Local configuration files that might contain sensitive info
+local_config.py
+config_local.py
+
+# Test outputs
+test_outputs/
+
+RD-Agent/

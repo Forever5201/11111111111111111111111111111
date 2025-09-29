@@ -1,0 +1,37 @@
+{
+  "model_name": "model_a_4h",
+  "created_at": "2025-09-28T13:46:58.905000",
+  "data_source": "OKX API + Enhanced Processing",
+  "datasets": {
+    "train_data.pkl": {
+      "BTC-USD-SWAP_4H": {
+        "records": 210,
+        "time_range": {
+          "start": "2025-08-08T16:00:00+00:00",
+          "end": "2025-09-12T12:00:00+00:00"
+        },
+        "time_span_days": 34
+      }
+    },
+    "val_data.pkl": {
+      "BTC-USD-SWAP_4H": {
+        "records": 45,
+        "time_range": {
+          "start": "2025-09-12T16:00:00+00:00",
+          "end": "2025-09-20T00:00:00+00:00"
+        },
+        "time_span_days": 7
+      }
+    },
+    "test_data.pkl": {
+      "BTC-USD-SWAP_4H": {
+        "records": 45,
+        "time_range": {
+          "start": "2025-09-20T04:00:00+00:00",
+          "end": "2025-09-27T12:00:00+00:00"
+        },
+        "time_span_days": 7
+      }
+    }
+  }
+}

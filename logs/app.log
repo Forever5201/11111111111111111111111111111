@@ -4973,3 +4973,377 @@ httpx.ConnectTimeout: timed out
 2025-01-07 08:37:00,887 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
 2025-01-07 08:37:01,324 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
 2025-01-07 08:37:01,778 - TradingBotLogger - INFO - Results saved to data.json
+2025-09-28 13:37:34,136 - TradingBotLogger - INFO - Loading configuration from ../config/config.yaml
+2025-09-28 13:37:34,136 - TradingBotLogger - ERROR - Error loading configuration: [Errno 2] No such file or directory: '../config/config.yaml'
+2025-09-28 13:37:34,136 - TradingBotLogger - ERROR - Error loading configuration: [Errno 2] No such file or directory: '../config/config.yaml'
+2025-09-28 13:43:21,390 - TradingBotLogger - INFO - 开始获取 BTC-USD-SWAP 4H 的完整历史数据...
+2025-09-28 13:43:21,390 - TradingBotLogger - INFO - 时间范围: 2021-01-01T00:00:00Z 到 2025-09-28T05:43:21Z
+2025-09-28 13:43:21,390 - TradingBotLogger - INFO - 时间范围: 2021-01-01T00:00:00Z 到 2025-09-28T05:43:21Z
+2025-09-28 13:43:21,390 - TradingBotLogger - INFO - 时间框架: 4H, 预计总周期数: 10387
+2025-09-28 13:43:21,390 - TradingBotLogger - INFO - 需要 35 个批次来获取完整数据
+2025-09-28 13:43:21,391 - TradingBotLogger - INFO - 获取批次 1/35...
+2025-09-28 13:43:21,391 - TradingBotLogger - ERROR - 获取数据失败: BTC-USD-SWAP 4H - 'DataFetcher' object has no attribute 'api_client'
+2025-09-28 13:43:21,391 - TradingBotLogger - WARNING - 批次 1: 未获取到数据
+2025-09-28 13:43:21,391 - TradingBotLogger - ERROR - 未获取到任何数据
+2025-09-28 13:43:21,391 - TradingBotLogger - INFO - 开始获取 BTC-USD-SWAP 1D 的完整历史数据...
+2025-09-28 13:43:21,391 - TradingBotLogger - INFO - 时间范围: 2021-01-01T00:00:00Z 到 2025-09-28T05:43:21Z
+2025-09-28 13:43:21,391 - TradingBotLogger - INFO - 时间范围: 2021-01-01T00:00:00Z 到 2025-09-28T05:43:21Z
+2025-09-28 13:43:21,391 - TradingBotLogger - INFO - 时间框架: 1D, 预计总周期数: 1731
+2025-09-28 13:43:21,392 - TradingBotLogger - INFO - 需要 6 个批次来获取完整数据
+2025-09-28 13:43:21,392 - TradingBotLogger - INFO - 获取批次 1/6...
+2025-09-28 13:43:21,392 - TradingBotLogger - ERROR - 获取数据失败: BTC-USD-SWAP 1D - 'DataFetcher' object has no attribute 'api_client'
+2025-09-28 13:43:21,392 - TradingBotLogger - WARNING - 批次 1: 未获取到数据
+2025-09-28 13:43:21,392 - TradingBotLogger - ERROR - 未获取到任何数据
+2025-09-28 13:44:40,253 - TradingBotLogger - INFO - 开始获取 BTC-USD-SWAP 4H 的历史数据...
+2025-09-28 13:44:40,253 - TradingBotLogger - INFO - 目标时间范围: 2021-01-01T00:00:00Z 到 2025-09-28T05:44:40Z
+2025-09-28 13:44:40,253 - TradingBotLogger - INFO - 注意: 由于API限制，将获取最大可用的历史数据
+2025-09-28 13:44:40,254 - TradingBotLogger - INFO - 获取历史数据...
+2025-09-28 13:44:40,254 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-28 13:44:41,280 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 13:44:41,280 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 13:44:41,727 - TradingBotLogger - INFO - 实际时间范围: 1754726400000 到 1759032000000
+2025-09-28 13:46:07,431 - TradingBotLogger - INFO - 开始获取 BTCUSDT 4h 历史数据...
+2025-09-28 13:46:07,432 - TradingBotLogger - INFO - 数据源: Binance公开API
+2025-09-28 13:46:07,432 - TradingBotLogger - INFO - 时间范围: 2021-01-01 到 现在
+2025-09-28 13:46:07,432 - TradingBotLogger - INFO - 获取批次 1 (时间: 2021-01-01 00:00:00)
+2025-09-28 13:46:08,262 - TradingBotLogger - ERROR - Binance API错误: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=4h&startTime=1609430400000&limit=1000&endTime=1759038367432
+2025-09-28 13:46:08,262 - TradingBotLogger - WARNING - 批次 1: 未获取到数据
+2025-09-28 13:46:08,263 - TradingBotLogger - ERROR - 未获取到任何数据
+2025-09-28 13:46:08,263 - TradingBotLogger - INFO - 开始获取 BTCUSDT 1d 历史数据...
+2025-09-28 13:46:08,263 - TradingBotLogger - INFO - 数据源: Binance公开API
+2025-09-28 13:46:08,263 - TradingBotLogger - INFO - 时间范围: 2021-01-01 到 现在
+2025-09-28 13:46:08,263 - TradingBotLogger - INFO - 获取批次 1 (时间: 2021-01-01 00:00:00)
+2025-09-28 13:46:08,521 - TradingBotLogger - ERROR - Binance API错误: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1609430400000&limit=1000&endTime=1759038368263
+2025-09-28 13:46:08,522 - TradingBotLogger - WARNING - 批次 1: 未获取到数据
+2025-09-28 13:46:08,522 - TradingBotLogger - ERROR - 未获取到任何数据
+2025-09-28 13:46:58,903 - TradingBotLogger - INFO - 保存 model_a_4h train_data.pkl: 210 条记录
+2025-09-28 13:46:58,904 - TradingBotLogger - INFO - 保存 model_a_4h val_data.pkl: 45 条记录
+2025-09-28 13:46:58,904 - TradingBotLogger - INFO - 保存 model_a_4h test_data.pkl: 45 条记录
+2025-09-28 13:46:58,906 - TradingBotLogger - INFO - 保存 model_b_1d train_data.pkl: 210 条记录
+2025-09-28 13:46:58,906 - TradingBotLogger - INFO - 保存 model_b_1d val_data.pkl: 45 条记录
+2025-09-28 13:46:58,907 - TradingBotLogger - INFO - 保存 model_b_1d test_data.pkl: 45 条记录
+2025-09-28 23:25:01,282 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-28 23:25:13,745 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-28 23:25:13,750 - TradingBotLogger - INFO - ============================================================
+2025-09-28 23:25:13,750 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-28 23:25:13,753 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-28 23:25:13,760 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-28 23:25:13,761 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (512 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:25:14,736 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:25:14,736 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:25:15,270 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-28 23:25:15,274 - TradingBotLogger - INFO -    4H: 300 records
+2025-09-28 23:25:15,275 - TradingBotLogger - INFO -       Time range: 2025-08-09 16:00:00+00:00 to 2025-09-28 12:00:00+00:00
+2025-09-28 23:25:15,285 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-28 23:25:15,286 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-28 23:25:15,286 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-28 23:25:45,025 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-28 23:25:45,029 - TradingBotLogger - INFO - ============================================================
+2025-09-28 23:25:45,029 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-28 23:25:45,032 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-28 23:25:45,038 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-28 23:25:45,039 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (512 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:25:46,082 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:25:46,082 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:25:46,527 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-28 23:25:46,532 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (512 points) for BTC-USD-SWAP at 1D...
+2025-09-28 23:25:47,060 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:25:47,060 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:25:47,518 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_1D
+2025-09-28 23:25:47,523 - TradingBotLogger - INFO -    4H: 300 records
+2025-09-28 23:25:47,523 - TradingBotLogger - INFO -       Time range: 2025-08-09 16:00:00+00:00 to 2025-09-28 12:00:00+00:00
+2025-09-28 23:25:47,524 - TradingBotLogger - INFO -    1D: 300 records
+2025-09-28 23:25:47,524 - TradingBotLogger - INFO -       Time range: 2024-12-02 16:00:00+00:00 to 2025-09-27 16:00:00+00:00
+2025-09-28 23:25:47,538 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-28 23:25:47,538 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-28 23:25:47,538 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-28 23:29:43,100 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-28 23:29:43,103 - TradingBotLogger - INFO - ============================================================
+2025-09-28 23:29:43,104 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-28 23:29:43,106 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-28 23:29:43,113 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-28 23:29:43,115 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:29:44,141 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:29:44,141 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:29:44,590 - TradingBotLogger - INFO -    Batch 1: 300 records (latest)
+2025-09-28 23:29:44,592 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) before 1754755200000 for BTC-USD-SWAP at 4H...
+2025-09-28 23:29:45,084 - TradingBotLogger - INFO - Fetched 299 K-line data.
+2025-09-28 23:29:45,085 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:29:45,529 - TradingBotLogger - INFO -    Batch 2: No new data found
+2025-09-28 23:29:45,541 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-28 23:29:45,554 - TradingBotLogger - INFO -    4H: 300 records
+2025-09-28 23:29:45,554 - TradingBotLogger - INFO -       Time range: 2025-08-09 16:00:00+00:00 to 2025-09-28 12:00:00+00:00
+2025-09-28 23:29:45,568 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-28 23:29:45,568 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-28 23:29:45,568 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-28 23:30:36,962 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-28 23:30:36,966 - TradingBotLogger - INFO - ============================================================
+2025-09-28 23:30:36,967 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-28 23:30:36,969 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-28 23:30:36,975 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-28 23:30:36,977 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:30:37,994 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:30:37,994 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:30:38,430 - TradingBotLogger - INFO -    Batch 1: 300 records (latest)
+2025-09-28 23:30:38,431 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) before 1754755200000 for BTC-USD-SWAP at 4H...
+2025-09-28 23:30:38,908 - TradingBotLogger - INFO - Fetched 299 K-line data.
+2025-09-28 23:30:38,908 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:30:39,338 - TradingBotLogger - INFO -    Batch 2: No new data found
+2025-09-28 23:30:39,345 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-28 23:30:39,351 - TradingBotLogger - INFO -    4H: 300 records
+2025-09-28 23:30:39,351 - TradingBotLogger - INFO -       Time range: 2025-08-09 16:00:00+00:00 to 2025-09-28 12:00:00+00:00
+2025-09-28 23:30:39,359 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-28 23:30:39,359 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-28 23:30:39,359 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-28 23:32:23,704 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-28 23:32:23,707 - TradingBotLogger - INFO - ==================================================
+2025-09-28 23:32:23,711 - TradingBotLogger - INFO -    Target: 512 records
+2025-09-28 23:32:23,712 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (512 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:32:24,693 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:32:24,694 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:32:25,145 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:32:25,635 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:32:25,636 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:32:26,066 - TradingBotLogger - INFO -    Batch 1: 300 records (latest)
+2025-09-28 23:32:26,067 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) before 1754755200000 for BTC-USD-SWAP at 4H...
+2025-09-28 23:32:26,564 - TradingBotLogger - INFO - Fetched 299 K-line data.
+2025-09-28 23:32:26,565 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:32:27,020 - TradingBotLogger - INFO -    Batch 2: No new data
+2025-09-28 23:32:27,023 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (500 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:32:27,509 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:32:27,509 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:32:27,961 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (400 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:32:28,467 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:32:28,467 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:32:28,902 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (350 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:32:29,404 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:32:29,405 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:32:29,849 - TradingBotLogger - INFO -    Time range: 1754755200000 to 1759060800000
+2025-09-28 23:32:29,853 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-28 23:32:29,861 - TradingBotLogger - INFO -    Records obtained: 300
+2025-09-28 23:32:29,861 - TradingBotLogger - INFO -    Target was: 512
+2025-09-28 23:32:29,862 - TradingBotLogger - INFO -    Success rate: 58.6%
+2025-09-28 23:32:29,862 - TradingBotLogger - INFO -    Time range: 2025-08-09 16:00:00+00:00 to 2025-09-28 12:00:00+00:00
+2025-09-28 23:33:06,030 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-28 23:33:06,035 - TradingBotLogger - INFO - ============================================================
+2025-09-28 23:33:06,035 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-28 23:33:06,038 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-28 23:33:06,043 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-28 23:33:06,045 - TradingBotLogger - INFO -    Target: 300 records, Batch size: 300, Max batches: 2
+2025-09-28 23:33:06,045 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-28 23:33:07,130 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-28 23:33:07,130 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-28 23:33:07,585 - TradingBotLogger - INFO -    Batch 1: 300 records (latest)
+2025-09-28 23:33:07,594 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-28 23:33:07,599 - TradingBotLogger - INFO -    4H: 300 records
+2025-09-28 23:33:07,599 - TradingBotLogger - INFO -       Time range: 2025-08-09 16:00:00+00:00 to 2025-09-28 12:00:00+00:00
+2025-09-28 23:33:07,956 - TradingBotLogger - ERROR - Error output:
+2025-09-28 23:33:07,959 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-28 23:33:07,959 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-28 23:33:07,959 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-29 09:12:07,533 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-29 09:12:07,539 - TradingBotLogger - INFO - ============================================================
+2025-09-29 09:12:07,539 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-29 09:12:07,542 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-29 09:12:07,548 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-29 09:12:07,552 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:12:08,569 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:12:08,570 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:12:09,010 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/history-candles (212 points) before 1754798400000 for BTC-USD-SWAP at 4H...
+2025-09-29 09:12:09,578 - TradingBotLogger - INFO - Fetched 212 K-line data.
+2025-09-29 09:12:09,578 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:12:10,044 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-29 09:12:10,051 - TradingBotLogger - INFO -    4H: 300 records
+2025-09-29 09:12:10,051 - TradingBotLogger - INFO -       Time range: 2025-08-10 04:00:00+00:00 to 2025-09-29 00:00:00+00:00
+2025-09-29 09:12:10,060 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-29 09:12:10,061 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-29 09:12:10,061 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-29 09:12:49,637 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-29 09:12:49,640 - TradingBotLogger - INFO - ============================================================
+2025-09-29 09:12:49,641 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-29 09:12:49,644 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-29 09:12:49,650 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-29 09:12:49,652 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:12:50,665 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:12:50,666 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:12:51,109 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/history-candles (212 points) before 1754798400000 for BTC-USD-SWAP at 4H...
+2025-09-29 09:12:51,601 - TradingBotLogger - INFO - Fetched 212 K-line data.
+2025-09-29 09:12:51,602 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:12:52,041 - TradingBotLogger - INFO -       Time range: 1756051200000 to 1759089600000
+2025-09-29 09:12:52,041 - TradingBotLogger - INFO -       Current before: 1754798400000
+2025-09-29 09:12:52,051 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-29 09:12:52,057 - TradingBotLogger - INFO -    4H: 300 records
+2025-09-29 09:12:52,057 - TradingBotLogger - INFO -       Time range: 2025-08-10 04:00:00+00:00 to 2025-09-29 00:00:00+00:00
+2025-09-29 09:12:52,066 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-29 09:12:52,066 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-29 09:12:52,066 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-29 09:13:26,324 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-29 09:13:26,328 - TradingBotLogger - INFO - ============================================================
+2025-09-29 09:13:26,328 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-29 09:13:26,331 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-29 09:13:26,336 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-29 09:13:26,339 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:13:27,350 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:13:27,350 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:13:27,804 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/history-candles (212 points) before 1754798400000 for BTC-USD-SWAP at 4H...
+2025-09-29 09:13:28,310 - TradingBotLogger - INFO - Fetched 212 K-line data.
+2025-09-29 09:13:28,311 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:13:28,755 - TradingBotLogger - INFO -       Time range: 1756051200000 to 1759089600000
+2025-09-29 09:13:28,755 - TradingBotLogger - INFO -       Current before: 1754798400000
+2025-09-29 09:13:28,763 - TradingBotLogger - INFO - Converted 300 records for BTC-USD-SWAP_4H
+2025-09-29 09:13:28,768 - TradingBotLogger - INFO -    4H: 300 records
+2025-09-29 09:13:28,768 - TradingBotLogger - INFO -       Time range: 2025-08-10 04:00:00+00:00 to 2025-09-29 00:00:00+00:00
+2025-09-29 09:13:28,776 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-29 09:13:28,776 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-29 09:13:28,776 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-29 09:14:44,187 - TradingBotLogger - INFO - ==================================================
+2025-09-29 09:14:44,188 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:14:45,209 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:14:45,210 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:14:45,652 - TradingBotLogger - INFO -    Records: 300
+2025-09-29 09:14:45,652 - TradingBotLogger - INFO -    Time range: 1754798400000 to 1759104000000
+2025-09-29 09:14:45,654 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/history-candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:14:46,173 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:14:46,174 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:14:46,606 - TradingBotLogger - INFO -    Records: 300
+2025-09-29 09:14:46,606 - TradingBotLogger - INFO -    Time range: 1754784000000 to 1759089600000
+2025-09-29 09:14:46,608 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/history-candles (300 points) before 1754798400000 for BTC-USD-SWAP at 4H...
+2025-09-29 09:14:47,129 - TradingBotLogger - INFO - Fetched 298 K-line data.
+2025-09-29 09:14:47,129 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:14:47,556 - TradingBotLogger - INFO -    Records: 298
+2025-09-29 09:14:47,556 - TradingBotLogger - INFO -    Time range: 1754812800000 to 1759089600000
+2025-09-29 09:14:47,557 - TradingBotLogger - INFO -    Earlier than live: 0 records
+2025-09-29 09:14:47,559 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/history-candles (300 points) after 1754798400000 for BTC-USD-SWAP at 4H...
+2025-09-29 09:14:48,081 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:14:48,081 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:14:48,511 - TradingBotLogger - INFO -    Records: 300
+2025-09-29 09:14:48,511 - TradingBotLogger - INFO -    Time range: 1750478400000 to 1754784000000
+2025-09-29 09:14:48,513 - TradingBotLogger - INFO - 
+   Testing limit=400
+2025-09-29 09:14:48,513 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (400 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:14:49,027 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:14:49,027 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:14:49,473 - TradingBotLogger - INFO -       Got: 300 records
+2025-09-29 09:14:49,474 - TradingBotLogger - INFO -       Time range: 1754798400000 to 1759104000000
+2025-09-29 09:14:49,474 - TradingBotLogger - INFO - 
+   Testing limit=500
+2025-09-29 09:14:49,474 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (500 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:14:49,972 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:14:49,973 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:14:50,402 - TradingBotLogger - INFO -       Got: 300 records
+2025-09-29 09:14:50,403 - TradingBotLogger - INFO -       Time range: 1754798400000 to 1759104000000
+2025-09-29 09:14:50,403 - TradingBotLogger - INFO - 
+   Testing limit=600
+2025-09-29 09:14:50,403 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (600 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:14:50,928 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:14:50,928 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:14:51,367 - TradingBotLogger - INFO -       Got: 300 records
+2025-09-29 09:14:51,367 - TradingBotLogger - INFO -       Time range: 1754798400000 to 1759104000000
+2025-09-29 09:14:51,368 - TradingBotLogger - INFO - 
+   Testing limit=1000
+2025-09-29 09:14:51,368 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (1000 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:14:51,871 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:14:51,872 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:14:52,323 - TradingBotLogger - INFO -       Got: 300 records
+2025-09-29 09:14:52,323 - TradingBotLogger - INFO -       Time range: 1754798400000 to 1759104000000
+2025-09-29 09:14:52,325 - TradingBotLogger - INFO -    Live vs History overlap: 299 records
+2025-09-29 09:14:52,326 - TradingBotLogger - INFO -    Combined unique records: 301
+2025-09-29 09:14:52,327 - TradingBotLogger - INFO -    Combined time range: 1754784000000 to 1759104000000
+2025-09-29 09:15:43,049 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-29 09:15:43,053 - TradingBotLogger - INFO - ============================================================
+2025-09-29 09:15:43,053 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-29 09:15:43,056 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-29 09:15:43,061 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-29 09:15:43,063 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 4H...
+2025-09-29 09:15:44,073 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:15:44,073 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:15:44,515 - TradingBotLogger - INFO -    Live data earliest time: 1754798400000
+2025-09-29 09:15:44,515 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/history-candles (212 points) after 1754798400000 for BTC-USD-SWAP at 4H...
+2025-09-29 09:15:45,000 - TradingBotLogger - INFO - Fetched 212 K-line data.
+2025-09-29 09:15:45,000 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:15:45,423 - TradingBotLogger - INFO -       Time range: 1751745600000 to 1754784000000
+2025-09-29 09:15:45,423 - TradingBotLogger - INFO -       Current after: 1754798400000
+2025-09-29 09:15:45,428 - TradingBotLogger - INFO -       Total so far: 512/512
+2025-09-29 09:15:45,428 - TradingBotLogger - INFO -       Next after: 1751745600000
+2025-09-29 09:15:45,434 - TradingBotLogger - INFO - Converted 512 records for BTC-USD-SWAP_4H
+2025-09-29 09:15:45,439 - TradingBotLogger - INFO -    4H: 512 records
+2025-09-29 09:15:45,439 - TradingBotLogger - INFO -       Time range: 2025-07-05 20:00:00+00:00 to 2025-09-29 00:00:00+00:00
+2025-09-29 09:15:45,449 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-29 09:15:45,449 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-29 09:15:45,449 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-29 09:16:11,390 - TradingBotLogger - INFO - yfinance可用，支持长期历史数据获取
+2025-09-29 09:16:11,393 - TradingBotLogger - INFO - ============================================================
+2025-09-29 09:16:11,393 - TradingBotLogger - INFO - Loading configuration from ./config/config.yaml
+2025-09-29 09:16:11,396 - TradingBotLogger - INFO - Configuration loaded successfully.
+2025-09-29 09:16:11,401 - TradingBotLogger - INFO - DataFetcher initialized successfully.
+2025-09-29 09:16:11,405 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/candles (300 points) for BTC-USD-SWAP at 1D...
+2025-09-29 09:16:12,410 - TradingBotLogger - INFO - Fetched 300 K-line data.
+2025-09-29 09:16:12,410 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:16:12,870 - TradingBotLogger - INFO -    Live data earliest time: 1733241600000
+2025-09-29 09:16:12,871 - TradingBotLogger - INFO - Fetching K-line data from /api/v5/market/history-candles (212 points) after 1733241600000 for BTC-USD-SWAP at 1D...
+2025-09-29 09:16:13,382 - TradingBotLogger - INFO - Fetched 212 K-line data.
+2025-09-29 09:16:13,382 - TradingBotLogger - INFO - Fetching funding rate for BTC-USD-SWAP...
+2025-09-29 09:16:13,820 - TradingBotLogger - INFO -       Time range: 1714924800000 to 1733155200000
+2025-09-29 09:16:13,820 - TradingBotLogger - INFO -       Current after: 1733241600000
+2025-09-29 09:16:13,823 - TradingBotLogger - INFO -       Total so far: 512/512
+2025-09-29 09:16:13,823 - TradingBotLogger - INFO -       Next after: 1714924800000
+2025-09-29 09:16:13,829 - TradingBotLogger - INFO - Converted 512 records for BTC-USD-SWAP_1D
+2025-09-29 09:16:13,833 - TradingBotLogger - INFO -    1D: 512 records
+2025-09-29 09:16:13,834 - TradingBotLogger - INFO -       Time range: 2024-05-05 16:00:00+00:00 to 2025-09-28 16:00:00+00:00
+2025-09-29 09:16:13,843 - TradingBotLogger - INFO -    1. 数据已保存到指定目录
+2025-09-29 09:16:13,843 - TradingBotLogger - INFO -    2. 可以运行 python predict_4h_model.py 进行预测
+2025-09-29 09:16:13,843 - TradingBotLogger - INFO -    3. 或使用 --run-prediction 参数自动运行预测
+2025-09-29 09:17:59,583 - TradingBotLogger - INFO - ============================================================
+2025-09-29 09:17:59,585 - TradingBotLogger - INFO - ============================================================
+2025-09-29 09:17:59,586 - TradingBotLogger - INFO -    总记录数: 512
+2025-09-29 09:17:59,586 - TradingBotLogger - INFO -    时间范围: 2025-07-05 20:00:00+00:00 到 2025-09-29 00:00:00+00:00
+2025-09-29 09:17:59,591 - TradingBotLogger - INFO -    间隔统计:
+2025-09-29 09:17:59,591 - TradingBotLogger - INFO -      正常: 511 (100.0%)
+2025-09-29 09:17:59,597 - TradingBotLogger - INFO -    连续性得分: 100.0%
+2025-09-29 09:17:59,602 - TradingBotLogger - INFO - ============================================================
+2025-09-29 09:17:59,604 - TradingBotLogger - INFO -    总记录数: 512
+2025-09-29 09:17:59,604 - TradingBotLogger - INFO -    时间范围: 2024-05-05 16:00:00+00:00 到 2025-09-28 16:00:00+00:00
+2025-09-29 09:17:59,606 - TradingBotLogger - INFO -    间隔统计:
+2025-09-29 09:17:59,606 - TradingBotLogger - INFO -      正常: 511 (100.0%)
+2025-09-29 09:17:59,611 - TradingBotLogger - INFO -    连续性得分: 100.0%
+2025-09-29 09:19:19,896 - TradingBotLogger - INFO - K线数据连续性详细分析
+2025-09-29 09:19:19,896 - TradingBotLogger - INFO - ==================================================
+2025-09-29 09:19:19,896 - TradingBotLogger - INFO - 检查4H数据连续性
+2025-09-29 09:19:19,896 - TradingBotLogger - INFO - ========================================
+2025-09-29 09:19:19,902 - TradingBotLogger - INFO - 总记录数: 512
+2025-09-29 09:19:19,903 - TradingBotLogger - INFO - 时间范围: 2025-07-05 20:00:00+00:00 到 2025-09-29 00:00:00+00:00
+2025-09-29 09:19:19,905 - TradingBotLogger - INFO - 
+间隔统计:
+2025-09-29 09:19:19,905 - TradingBotLogger - INFO -   正常间隔 (4小时): 511
+2025-09-29 09:19:19,905 - TradingBotLogger - INFO -   时间间隔: 0
+2025-09-29 09:19:19,906 - TradingBotLogger - INFO -   时间重叠: 0
+2025-09-29 09:19:19,906 - TradingBotLogger - INFO - 
+连续性评分: 100.0%
+2025-09-29 09:19:19,906 - TradingBotLogger - INFO - 
+检查1D数据连续性
+2025-09-29 09:19:19,906 - TradingBotLogger - INFO - ========================================
+2025-09-29 09:19:19,910 - TradingBotLogger - INFO - 总记录数: 512
+2025-09-29 09:19:19,910 - TradingBotLogger - INFO - 时间范围: 2024-05-05 16:00:00+00:00 到 2025-09-28 16:00:00+00:00
+2025-09-29 09:19:19,911 - TradingBotLogger - INFO - 
+间隔统计:
+2025-09-29 09:19:19,912 - TradingBotLogger - INFO -   正常间隔 (1天): 511
+2025-09-29 09:19:19,912 - TradingBotLogger - INFO -   时间间隔: 0
+2025-09-29 09:19:19,912 - TradingBotLogger - INFO -   时间重叠: 0
+2025-09-29 09:19:19,912 - TradingBotLogger - INFO - 
+连续性评分: 100.0%
+2025-09-29 09:19:19,913 - TradingBotLogger - INFO - 
+总结报告
+2025-09-29 09:19:19,913 - TradingBotLogger - INFO - ==============================
+2025-09-29 09:19:19,913 - TradingBotLogger - INFO - 4H数据:
+2025-09-29 09:19:19,913 - TradingBotLogger - INFO -   连续性: 100.0%
+2025-09-29 09:19:19,913 - TradingBotLogger - INFO -   间隔数: 0
+2025-09-29 09:19:19,913 - TradingBotLogger - INFO -   重叠数: 0
+2025-09-29 09:19:19,913 - TradingBotLogger - INFO - 
+1D数据:
+2025-09-29 09:19:19,914 - TradingBotLogger - INFO -   连续性: 100.0%
+2025-09-29 09:19:19,914 - TradingBotLogger - INFO -   间隔数: 0
+2025-09-29 09:19:19,914 - TradingBotLogger - INFO -   重叠数: 0
+2025-09-29 09:19:19,914 - TradingBotLogger - INFO - 
+整体评价:
+2025-09-29 09:19:19,914 - TradingBotLogger - INFO -   平均连续性: 100.0%
+2025-09-29 09:19:19,914 - TradingBotLogger - INFO -   结论: 数据质量优秀，高度连续
