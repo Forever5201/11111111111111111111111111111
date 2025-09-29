@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "core_modules": 9,
+    "ml_modules": 7,
+    "web_modules": 3,
+    "finance_modules": 3,
+    "missing_count": 0,
+    "conflicts_count": 0
+  },
+  "details": {
+    "core_modules": [
+      {
+        "name": "Pandas数据处理",
+        "version": "2.2.2",
+        "status": "OK"
+      },
+      {
+        "name": "NumPy数值计算",
+        "version": "2.2.6",
+        "status": "OK"
+      },
+      {
+        "name": "HTTP请求库",
+        "version": "2.31.0",
+        "status": "OK"
+      },
+      {
+        "name": "PyYAML配置解析",
+        "version": "6.0.1",
+        "status": "OK"
+      },
+      {
+        "name": "Python日志库",
+        "version": "0.5.1.2",
+        "status": "OK"
+      },
+      {
+        "name": "JSON处理库",
+        "version": "2.0.9",
+        "status": "OK"
+      },
+      {
+        "name": "日期时间处理",
+        "version": "N/A",
+        "status": "OK"
+      },
+      {
+        "name": "操作系统接口",
+        "version": "N/A",
+        "status": "OK"
+      },
+      {
+        "name": "系统参数和函数",
+        "version": "N/A",
+        "status": "OK"
+      }
+    ],
+    "ml_modules": [
+      {
+        "name": "PyTorch深度学习",
+        "version": "2.8.0+cu126",
+        "status": "OK"
+      },
+      {
+        "name": "HuggingFace Transformers",
+        "version": "4.53.3",
+        "status": "OK"
+      },
+      {
+        "name": "HuggingFace Hub",
+        "version": "0.33.1",
+        "status": "OK"
+      },
+      {
+        "name": "Einops张量操作",
+        "version": "0.8.1",
+        "status": "OK"
+      },
+      {
+        "name": "Matplotlib可视化",
+        "version": "3.10.6",
+        "status": "OK"
+      },
+      {
+        "name": "进度条库",
+        "version": "4.67.1",
+        "status": "OK"
+      },
+      {
+        "name": "安全张量存储",
+        "version": "0.6.2",
+        "status": "OK"
+      }
+    ],
+    "web_modules": [
+      {
+        "name": "Flask Web框架",
+        "version": "2.3.3",
+        "status": "OK"
+      },
+      {
+        "name": "Plotly交互图表",
+        "version": "5.17.0",
+        "status": "OK"
+      },
+      {
+        "name": "WebSocket客户端",
+        "version": "1.8.0",
+        "status": "OK"
+      }
+    ],
+    "finance_modules": [
+      {
+        "name": "Yahoo Finance API",
+        "version": "0.2.66",
+        "status": "OK"
+      },
+      {
+        "name": "技术分析指标库",
+        "version": "N/A",
+        "status": "OK"
+      },
+      {
+        "name": "OKX交易所API",
+        "version": "2.1.2",
+        "status": "OK"
+      }
+    ],
+    "system_info": {
+      "python_version": "3.10.11",
+      "torch_version": "2.8.0+cu126",
+      "cuda_available": true,
+      "cuda_version": "12.6",
+      "device_name": "NVIDIA GeForce RTX 3060"
+    },
+    "conflicts": [],
+    "missing_modules": []
+  }
+}
